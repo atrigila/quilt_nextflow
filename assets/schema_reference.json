@@ -1,0 +1,24 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "$id": "https://raw.githubusercontent.com/nf-core/saliva/master/assets/schema_input.json",
+    "title": "nf-core/saliva pipeline - params.input schema",
+    "description": "Schema for the file provided with params.input",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "chr": {
+                "type": "string",
+                "pattern": "^\\S+$",
+                "errorMessage": "Chromosome name must be provided and cannot contain spaces",
+                "meta": ["id"]
+            },
+            "vcf": {
+                "type": "string",
+                "pattern": "^\\S+\\.vcf.gz$",
+                "errorMessage": "VCF file must be provided, cannot contain spaces and must have extension '.vcf.gz'"
+            }
+        },
+        "required": ["chr", "vcf"]
+    }
+}

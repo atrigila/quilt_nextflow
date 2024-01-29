@@ -10,13 +10,17 @@
 
 ## Pipeline tools
 
-- [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+- [QUILT](https://pubmed.ncbi.nlm.nih.gov/34083788/)
 
-  > Andrews, S. (2010). FastQC: A Quality Control Tool for High Throughput Sequence Data [Online].
+  > Davies, R. W., Kucka, M., Su, D., Shi, S., Flanagan, M., Cunniff, C. M., ... & Myers, S. (2021). Rapid genotype imputation from sequence with reference panels. Nature genetics, 53(7), 1104-1111.
 
-- [MultiQC](https://pubmed.ncbi.nlm.nih.gov/27312411/)
+- [GLIMPSE](https://www.nature.com/articles/s41588-020-00756-0)
 
-  > Ewels P, Magnusson M, Lundin S, Käller M. MultiQC: summarize analysis results for multiple tools and samples in a single report. Bioinformatics. 2016 Oct 1;32(19):3047-8. doi: 10.1093/bioinformatics/btw354. Epub 2016 Jun 16. PubMed PMID: 27312411; PubMed Central PMCID: PMC5039924.
+  > Rubinacci, S., Ribeiro, D. M., Hofmeister, R. J., & Delaneau, O. (2021). Efficient phasing and imputation of low-coverage sequencing data using large reference panels. Nature Genetics, 53(1), 120-126.
+
+  - [bcftools](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3198575/)
+
+  > Li, H. (2011). A statistical framework for SNP calling, mutation discovery, association mapping and population genetical parameter estimation from sequencing data. Bioinformatics, 27(21), 2987-2993.
 
 ## Software packaging/containerisation tools
 

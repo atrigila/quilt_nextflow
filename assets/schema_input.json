@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema",
-    "$id": "https://raw.githubusercontent.com/nf-core/quilt/master/assets/schema_input.json",
-    "title": "nf-core/quilt pipeline - params.input schema",
+    "$id": "https://raw.githubusercontent.com/nf-core/saliva/master/assets/schema_input.json",
+    "title": "nf-core/saliva pipeline - params.input schema",
     "description": "Schema for the file provided with params.input",
     "type": "array",
     "items": {
@@ -10,27 +10,20 @@
             "sample": {
                 "type": "string",
                 "pattern": "^\\S+$",
-                "errorMessage": "Sample name must be provided and cannot contain spaces"
+                "errorMessage": "Sample name must be provided and cannot contain spaces",
+                "meta": ["id"]
             },
-            "fastq_1": {
+            "bam": {
                 "type": "string",
-                "pattern": "^\\S+\\.f(ast)?q\\.gz$",
-                "errorMessage": "FastQ file for reads 1 must be provided, cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'"
+                "pattern": "^\\S+\\.bam$",
+                "errorMessage": "BAM file must be provided, cannot contain spaces and must have extension '.bam'"
             },
-            "fastq_2": {
-                "errorMessage": "FastQ file for reads 2 cannot contain spaces and must have extension '.fq.gz' or '.fastq.gz'",
-                "anyOf": [
-                    {
-                        "type": "string",
-                        "pattern": "^\\S+\\.f(ast)?q\\.gz$"
-                    },
-                    {
-                        "type": "string",
-                        "maxLength": 0
-                    }
-                ]
+            "bai": {
+                "type": "string",
+                "pattern": "^\\S+\\.bai$",
+                "errorMessage": "BAI file must be provided, cannot contain spaces and must have extension '.bai'"
             }
         },
-        "required": ["sample", "fastq_1"]
+        "required": ["sample", "bam", "bai"]
     }
 }

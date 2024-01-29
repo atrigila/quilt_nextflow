@@ -1,0 +1,14 @@
+Changes in module 'nf-core/bcftools/concat'
+--- modules/nf-core/bcftools/concat/main.nf
++++ modules/nf-core/bcftools/concat/main.nf
+@@ -25,7 +25,7 @@
+         --output ${prefix}.vcf.gz \\
+         $args \\
+         --threads $task.cpus \\
+-        ${vcfs}
++        \$(ls -1v ${vcfs})
+ 
+     cat <<-END_VERSIONS > versions.yml
+     "${task.process}":
+
+************************************************************
